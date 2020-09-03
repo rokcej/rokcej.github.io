@@ -1,0 +1,121 @@
+{
+	"custom_phong_liquid": {
+		"description": "Phong for scenes submerged in a liquid",
+		"shaders": {
+			"vertex": "phong_liquid.vert",
+			"fragment": "phong_liquid.frag"
+		}
+	},
+	"custom_water": {
+		"description": "Render underwater scene.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "water.frag"
+		}
+	},
+	"custom_post": {
+		"description": "Post processing.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "post.frag"
+		}
+	},
+	"custom_particles_draw": {
+		"description": "Draw particles.",
+		"shaders": {
+			"vertex": "particles/particles_draw.vert",
+			"fragment": "particles/particles_draw.frag"
+		}
+	},
+	"custom_particles_update": {
+		"description": "Update particles.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "particles/particles_update.frag"
+		}
+	},
+	"custom_perlin_noise": {
+		"description": "Generate Perlin noise.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "perlin_noise.frag"
+		}
+	},
+	"custom_dof_downsample_near": {
+		"description": "DOF 1.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "dof/downsample_near.frag"
+		}
+	},
+	"custom_dof_coc_near": {
+		"description": "DOF 2.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "dof/coc_near.frag"
+		}
+	},
+	"custom_dof_small_blur": {
+		"description": "DOF 3.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "dof/small_blur.frag"
+		}
+	},
+	"custom_dof": {
+		"description": "DOF 4.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "dof/dof.frag"
+		}
+	},
+	"custom_depth_distance": {
+		"description": "Get actual depth distance.",
+		"shaders": {
+			"vertex": "depth_distance.vert",
+			"fragment": "depth_distance.frag"
+		}
+	},
+	"custom_gaussian_blur": {
+		"description": "Gaussian blur.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "gaussian_blur.frag"
+		}
+	},
+	"custom_shadow_map": {
+		"description": "Shadow map.",
+		"shaders": {
+			"vertex": "lights/shadow_map.vert",
+			"fragment": "lights/shadow_map.frag"
+		}
+	},
+	"custom_light_volume": {
+		"description": "Polygonal light volume.",
+		"shaders": {
+			"vertex": "lights/light_volume.vert",
+			"fragment": "lights/light_volume.frag"
+		}
+	},
+	"custom_airlight_lookup": {
+		"description": "Airlight function lookup table.",
+		"shaders": {
+			"vertex": "lights/airlight_lookup.vert",
+			"fragment": "lights/airlight_lookup.frag"
+		}
+	},
+	"custom_light_volume_blend": {
+		"description": "Blend light volume passes.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "lights/light_volume_blend.frag"
+		}
+	},
+	"custom_texture": {
+		"description": "Adds textures.",
+		"shaders": {
+			"vertex": "texture.vert",
+			"fragment": "texture.frag"
+		}
+	}
+}
