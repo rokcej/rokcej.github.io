@@ -143,9 +143,10 @@ export class MeshRenderer extends Renderer {
 			console.log("COMPILED: " + this._compiledPrograms + " length: " + this._compiledPrograms.size);
 			console.log(this._compiledPrograms);
 			console.log("--------------------------------------");*/
-
+			this.succeeded = false;
 			return;
 		}
+		this.succeeded = true;
 		if(!this.used) {
 			console.log("-----------------POST------------------");
 			console.log("REQUIRED: " + this._requiredPrograms + " length: " + this._requiredPrograms.length);
