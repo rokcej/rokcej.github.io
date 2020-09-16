@@ -1199,7 +1199,7 @@ class App {
 			gamepads: undefined,
 			multiplier: 1
 		};
-		this.cameraManager.update(input, this.timer.delta * 1000);
+		this.cameraManager.update(input, 10);// this.timer.delta * 1000);
 
 		// Move light
 		this.lights.frustum[0].camera.position.x = -6 + 3 * Math.sin(this.timer.curr * 0.5);
