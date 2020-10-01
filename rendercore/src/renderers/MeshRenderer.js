@@ -399,9 +399,8 @@ export class MeshRenderer extends Renderer {
 			this._gl.blendEquation(this._gl.FUNC_ADD);
 			//this._gl.blendFunc(this._gl.SRC_ALPHA, this._gl.ONE_MINUS_SRC_ALPHA);
 			//added separate blending function
-			//this._gl.blendFuncSeparate(this._gl.SRC_ALPHA, this._gl.ONE_MINUS_SRC_ALPHA, this._gl.ONE, this._gl.ONE_MINUS_SRC_ALPHA);
-			this._gl.blendFuncSeparate(this._gl.SRC_ALPHA, this._gl.ONE, this._gl.ONE, this._gl.ONE);
-			//this._gl.blendFuncSeparate(this._gl.ONE, this._gl.ONE, this._gl.ONE, this._gl.ONE);
+			//this._gl.blendFuncSeparate(this._gl.SRC_ALPHA, this._gl.ONE_MINUS_SRC_ALPHA, this._gl.ONE, this._gl.ONE_MINUS_SRC_ALPHA); // Default
+			this._gl.blendFuncSeparate(this._gl.SRC_ALPHA, this._gl.ONE, this._gl.ONE, this._gl.ONE); // Additive blending
 
 
 			// Render transparent objects

@@ -82,7 +82,7 @@ export class OrbitCameraControls {
 	 * @returns
 	 */
 	_getZoomScale(deltaT) {
-		return Math.pow(0.95, this._zoomSpeed * deltaT * 0.1);
+		return Math.pow(0.95, this._zoomSpeed);
 	}
 
 	/**
@@ -361,8 +361,8 @@ let _updateHandle = function () {
 		}
 
 		if (inputData.mouse.buttons.right && !inputData.mouse.buttons.left) {
-			translationVec.x = (inputData.mouse.prevPosition.x - inputData.mouse.position.x) * deltaT;
-			translationVec.y = (inputData.mouse.prevPosition.y - inputData.mouse.position.y) * deltaT;
+			translationVec.x = (inputData.mouse.prevPosition.x - inputData.mouse.position.x) * 10;
+			translationVec.y = (inputData.mouse.prevPosition.y - inputData.mouse.position.y) * 10;
 			translationVec.z = 0;
 
 			translationVec.applyEuler(this._camera.rotation);
@@ -380,10 +380,10 @@ let _updateHandle = function () {
 		// Apply rotation if the left mouse button is clicked
 		if (this._enableRotate && inputData.mouse.buttons.left) {
 				// Rotating across whole screen goes 360 degrees around
-				this._spherical.theta -= 2 * Math.PI * (inputData.mouse.position.x - inputData.mouse.prevPosition.x) * this._rotateSpeed * deltaT * 0.03;
+				this._spherical.theta -= 2 * Math.PI * (inputData.mouse.position.x - inputData.mouse.prevPosition.x) * this._rotateSpeed * 0.3;
 
 				// Rotating up and down along whole screen attempts to go 360, but limited to 180
-				this._spherical.phi -= 2 * Math.PI * (inputData.mouse.prevPosition.y - inputData.mouse.position.y) * this._rotateSpeed * deltaT * 0.03;
+				this._spherical.phi -= 2 * Math.PI * (inputData.mouse.prevPosition.y - inputData.mouse.position.y) * this._rotateSpeed * 0.3;
 
 				// restrict theta to be between desired limits
 				this._spherical.theta = Math.max(this._minAzimuthAngle, Math.min(this._maxAzimuthAngle, this._spherical.theta));
